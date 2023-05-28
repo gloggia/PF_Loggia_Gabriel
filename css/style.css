@@ -1,5 +1,6 @@
 /*selector universal*/
-{
+
+*{
     margin : 0;
     padding: 0;
     box-sizing: border-box;
@@ -224,7 +225,9 @@
 }
  
  body
- {  background-color:black; 
+ {  background-color:black;
+    --bs-body-bg:black; 
+
     }
   
 .body_style {
