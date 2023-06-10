@@ -1,0 +1,31 @@
+.menu_container{
+    display: flex; 
+    width: 100%;
+    @include fuentes_menu;  
+    .menu {
+      background-color:$color-head;
+      width:100%;
+      @include flex_menu;
+      .logo_image{
+        width: 10rem;
+       }
+       .lupa{
+         width: 3rem;
+         height: 3rem;    
+      }
+      ul 
+        {
+          /* si no pongo flex aqui los links se ven horizotal*/
+          display:flex;
+          list-style-type: none;
+          /*El margin se coloca en los li de la UL para separar sus items*/
+          li{
+            margin: 10px;
+            flex-wrap: wrap;
+            a{
+              @include menu_links;
+             }
+          }   
+        }
+      }
+}

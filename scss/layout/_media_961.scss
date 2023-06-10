@@ -1,0 +1,46 @@
+@media screen and (min-width:961px ) 
+{  
+    .menu {
+        /*  border: 1px solid coral;*/  
+        /*  coloco el flex en el nav para alinear las dos imagenes y la lista */
+        padding: 25px;
+        flex-direction: row;
+           
+    }
+   
+    .lanzamientos-grid-container{
+        padding: 20px;
+        display:grid;
+        align-items: center ;
+        justify-items: center ;
+        justify-content:center ;                                                                                                                             ;
+        grid-template-columns:  repeat(4,1fr) ; 
+        grid-template-rows: repeat(2,1fr)   ; 
+        column-gap: 15px    ; 
+        grid-template-areas: 
+        'img_lanz_1 img_lanz_2 img_lanz_3 img_lanz_4'
+        'img_lanz_5 img_lanz_6 img_lanz_7 img_lanz_8';
+        .img_release
+        {
+            padding-top:40px;
+            padding-bottom: 5px;
+            width: 100%;
+            height:100%;
+        
+        }  
+    }
+   
+    
+    .evento-sub-section{
+        padding-left: 20px;
+        display: flex;
+        flex-direction:row;
+        align-items:center;
+        align-content: space-around;
+        justify-content: space-between;
+     }
+  
+
+
+
+}

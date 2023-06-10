@@ -1,0 +1,21 @@
+/*Reset*/
+
+*{
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{  
+   @include color_de_fondo;    
+   @include fuentes_body; 
+}
+
+
+.body_style {
+   @extend body; 
+}
+      
+   
+

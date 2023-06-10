@@ -1,0 +1,56 @@
+@media screen and ( max-width: 500px)
+{
+    .menu {
+        padding: 10px;
+        flex-direction: column;
+        flex-wrap: wrap;  
+        ul{
+            display:flex;
+            flex-direction: column;
+            list-style-type: none;
+        }  
+    }
+
+    footer ul {
+      flex-direction:column; 
+      align-content: center;
+    }
+  
+
+    .lanzamientos-grid-container{
+      display:grid;
+      align-items: center ;
+      justify-items: center ;
+      justify-content:center ;                                                                                                                             ;
+      grid-template-columns:  100px  ; 
+      grid-template-rows: repeat(8,1fr)   ; 
+      column-gap: 15px    ; 
+      grid-template-areas: 
+      'img_lanz_1 '
+      'img_lanz_2 '
+      'img_lanz_3 '
+      'img_lanz_4 '
+      'img_lanz_5 '
+      'img_lanz_6 '
+      'img_lanz_7 '
+      'img_lanz_8 ';
+  
+      .img_release
+      {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 150px;
+        height:150px;
+      } 
+    }
+ 
+
+   .evento-sub-section{
+     padding-top: 10px;
+     display: flex;
+     flex-direction:column;
+     align-items:center;
+     align-content: space-around;
+     justify-content: center;
+   }         
+}

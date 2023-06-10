@@ -1,0 +1,25 @@
+main{
+    .titulo_eventos{
+        @extend .titulo_lanzamiento;
+    }
+    .evento-sub-section{
+        .evento-section{
+            .evento_p{
+                color:$color-body-font;
+                font-size: 15px; 
+                font-style:normal ;
+                font-weight: bold;
+                text-decoration:none;
+                text-align: left;
+                text-align:left;
+                
+            }
+        }
+        .evento-imagen{
+            .img_evento{
+               width: 150px;
+               height:100%;   
+            }
+      }
+    }  
+}

@@ -1,0 +1,51 @@
+
+main{
+   
+   .titulo_lanzamiento{
+      @include flex_center;
+      @include fuentes_titulo;     
+     }  
+     
+   .lanzamientos-grid-container 
+    
+   {
+      .lanzamiento-grid-1{
+         grid-area: img_lanz_1;   
+      }
+      .lanzamiento-grid-2{
+         grid-area: img_lanz_2;   
+      }
+      .lanzamiento-grid-3{
+         grid-area: img_lanz_3;   
+      }
+      .lanzamiento-grid-4{
+         grid-area: img_lanz_4;   
+      }
+      .lanzamiento-grid-5{
+         grid-area: img_lanz_5;   
+      }
+      .lanzamiento-grid-6{
+         grid-area: img_lanz_6;   
+       
+      }
+      .lanzamiento-grid-7{
+         grid-area: img_lanz_7;   
+      }
+      .lanzamiento-grid-8{
+         grid-area: img_lanz_8;    
+      }
+      
+      .release_etiqueta
+      {
+         color:$color-etiqueta;
+         font-size: 20px; 
+         font-style:normal ;
+         font-weight: bold;
+         text-decoration:none;
+         text-align:center;           
+      }      
+   }
+}
+
+
+

@@ -1,0 +1,42 @@
+
+
+  @mixin flex_center{
+    display:flex;
+    justify-content: center;
+ }
+
+ @mixin color_de_fondo{
+    background-color:$color-fondo;
+     --bs-body-bg:black; 
+ }
+
+ @mixin fuentes_body{
+    color:$color-body-font;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px; 
+ }
+
+ @mixin fuentes_titulo{
+   font-size: 120%;
+   color:$color-etiqueta;
+ }
+
+ @mixin fuentes_menu{
+   font-family : 'Libre Baskerville', sans-serif;
+   font-size : 120%;
+ } 
+ @mixin fuentes_foot{
+    font-family : 'Libre Baskerville', sans-serif;
+    font-size : 120%;
+  } 
+
+ @mixin flex_menu{
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;       
+ }
+ @mixin menu_links{
+    color:black;
+    font-weight: 600;
+    text-decoration: none;   
+ }

@@ -1,489 +1,236 @@
-/*selector universal*/
-
-*{
-    margin : 0;
-    padding: 0;
-    box-sizing: border-box;
+/* imports*/ /*variables*/ /*Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-/* ============================Media queries para distintos dispositivos======================*/
-/*medida Mobile*/
-@media screen and ( max-width: 500px)
-{
-    
-   
-
-    .menu {
-        padding: 10px;
-        flex-direction: column;
-        flex-wrap: wrap;    
-    }
-    .menu ul 
-    {
-        display:flex;
-        flex-direction: column;
-        list-style-type: none;
-    }
-
-    
-    footer ul
-    {
-      flex-direction:column; 
-      align-content: center;
-  
-        }
-
- .index-grid_container{
-    grid-template-columns:  300px  ; 
-    grid-template-rows: 1fr 1fr  ; 
-    column-gap: 15px    ; 
-    grid-template-areas: 
-    'imagen'
-    'texto';
-    
-    justify-content: center ; 
+body, .body_style {
+  background-color: black;
+  --bs-body-bg:black;
+  color: white;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
 }
 
-.lanzamientos-grid-container{
-    display:grid;
-    align-items: center ;
-    justify-items: center ;
-    justify-content:center ;                                                                                                                             ;
-    grid-template-columns:  100px  ; 
-    grid-template-rows: repeat(8,1fr)   ; 
-    column-gap: 15px    ; 
-    grid-template-areas: 
-    'img_lanz_1 '
-    'img_lanz_2 '
-    'img_lanz_3 '
-    'img_lanz_4 '
-    'img_lanz_5 '
-    'img_lanz_6 '
-    'img_lanz_7 '
-    'img_lanz_8 ';
+@media screen and (max-width: 500px) {
+  .menu {
+    padding: 10px;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
-  .img_release
-  {
-      width: 150px;
-      height:150px;
-  
-  } 
-
-  .evento-sub-section{
+  .menu ul {
     display: flex;
-    flex-direction:column;
-    align-items:center;
+    flex-direction: column;
+    list-style-type: none;
+  }
+  footer ul {
+    flex-direction: column;
+    align-content: center;
+  }
+  .lanzamientos-grid-container {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    grid-template-columns: 100px;
+    grid-template-rows: repeat(8, 1fr);
+    column-gap: 15px;
+    grid-template-areas: "img_lanz_1 " "img_lanz_2 " "img_lanz_3 " "img_lanz_4 " "img_lanz_5 " "img_lanz_6 " "img_lanz_7 " "img_lanz_8 ";
+  }
+  .lanzamientos-grid-container .img_release {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 150px;
+    height: 150px;
+  }
+  .evento-sub-section {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     align-content: space-around;
     justify-content: center;
- }
- .contacto-container{
-    display: flex;
-    align-items:center;
-    flex-direction: column;
-    
-}
-.paragraph-contacto{
-    width: 270px    ;
-
-}
-}
-/*medida Tablet*/
-@media screen and (min-width:501px ) and ( max-width: 960px)
-{
-    
-   
-    .menu {
-        /*  border: 1px solid coral;*/  
-        /*  coloco el flex en el nav para alinear las dos imagenes y la lista */
-        padding: 15px;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    .index-grid_container{
-        grid-template-columns:  300px   ; 
-        grid-template-rows: 1fr   ; 
-        column-gap: 15px    ; 
-        grid-template-areas: 
-        'imagen'
-        'texto';  
-        justify-content: center ; 
-        }
-    
-        .lanzamientos-grid-container{
-            display:grid;
-            align-items: center ;
-            justify-items: center ;
-            justify-content:center ;                                                                                                                              ;
-            grid-template-columns:  repeat(2,1fr) ; 
-            grid-template-rows: repeat(4,1fr)   ; 
-            column-gap: 10px    ; 
-            grid-template-areas: 
-            'img_lanz_1 img_lanz_2 '
-            'img_lanz_3 img_lanz_4 '
-            'img_lanz_5 img_lanz_6 '
-            'img_lanz_7 img_lanz_8'          
-        }
-        .img_release
-        {
-            width: 200px;
-            height:200px;
-        
-        }
-        .evento-sub-section{
-            display: flex;
-            flex-direction:row;
-            align-items:center;
-            justify-content: space-between;
-         }  
-         .contacto-container{
-            display: flex;
-            align-items:center;
-            flex-direction: column;
-        }
-
-        
-        .paragraph-contacto{
-            width: 320px    ;
-    
-        }
-}
-/*medida Desktop*/
-@media screen and (min-width:961px ) 
-{
-   
-    .menu {
-        /*  border: 1px solid coral;*/  
-        /*  coloco el flex en el nav para alinear las dos imagenes y la lista */
-        padding: 25px;
-        flex-direction: row;
-           
-    }
-    .index-grid_container{
-        grid-template-columns:  300px 700px  ; 
-        grid-template-rows: 1fr 1fr  ; 
-        column-gap: 15px    ; 
-        grid-template-areas: 
-        'imagen texto'
-        'imagen texto';
-        justify-content: start ; 
-    }
-    .lanzamientos-grid-container{
-        padding: 20px;
-        display:grid;
-        align-items: center ;
-        justify-items: center ;
-        justify-content:center ;                                                                                                                             ;
-        grid-template-columns:  repeat(4,1fr) ; 
-        grid-template-rows: repeat(2,1fr)   ; 
-        column-gap: 15px    ; 
-        grid-template-areas: 
-        'img_lanz_1 img_lanz_2 img_lanz_3 img_lanz_4'
-        'img_lanz_5 img_lanz_6 img_lanz_7 img_lanz_8';
-        
-    }
-    .img_release
-    {
-        width: 100%;
-        height:100%;
-    
-    }  
-    .evento-sub-section{
-        display: flex;
-        flex-direction:row;
-         align-items:center;
-        align-content: space-around;
-        justify-content: space-between;
-     }
-     .contacto-container{
-        display: flex;
-        align-items:flex-start;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-  
-   .paragraph-contacto{
-    width: 700px    ;
-}
-}
-
-
-/*==================================Encabezado, Body y Footer===============================*/        
-/*body {
-   background-color: chartreuse;
-    font-family : 'Libre Baskerville', sans-serif; 
-   font-size: 1rem;
-   font-weight: 400;
-   line-height: 1.5;
-   color: #212529;
-   text-align: left;
- }*/
-
- 
- body
- {  background-color:black;
-    --bs-body-bg:black; 
-
-    }
-  
-.body_style {
-    background-color: black;
-    color: white;
-    font-family: 'Raleway', sans-serif;
-    font-size: 14px; 
-}
-
-    /*colocar display:flex va en el Nav en un menu*/
-.menu_container{
-    color:#325050;
-    list-style-type: none;
-    border-bottom: 1px solid gray;  
-    display: flex; 
-    width: 100%;
-    font-family : 'Libre Baskerville', sans-serif;
-    font-size : 120%;
-}
-   
-.menu {
-    background-color:tomato;
-    width: 100%;
-    display: flex;
-    justify-content: space-around; 
-    align-items: center;   
-}
-
-/*logo 5am*/
-.logo_image{
-    width: 10rem;
-}
-/*Lupa de búsqeda*/
-.lupa{
-    width: 3rem;
-    height: 3rem;    
-}
-
-/*navegación lista de links */
-.menu ul 
-{
-    /* si no pongo flex aqui los links se ven horizotal*/
-    display:flex;
-    list-style-type: none;
   }
-
-/*El margin se coloca en los li de la UL para separar sus items*/
-.menu ul li
-{
-    margin: 10px;
+}
+@media screen and (min-width: 501px) and (max-width: 960px) {
+  .menu {
+    /*  coloco el flex en el nav para alinear las dos imagenes y la lista */
+    padding: 15px;
+    flex-direction: row;
     flex-wrap: wrap;
-}   
-
-.menu ul li a
-{
-    color:black;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-footer{
-    border-top: 1px solid gray;  
-    background-color:tomato;
-    font-family : 'Libre Baskerville', sans-serif;
-    font-size : 120%;
-        
-}
-  
-  
-/* Lista del Footer */
-footer ul
-{
-    
-    padding: 25px;
+  }
+  .lanzamientos-grid-container {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    column-gap: 10px;
+    grid-template-areas: "img_lanz_1 img_lanz_2 " "img_lanz_3 img_lanz_4 " "img_lanz_5 img_lanz_6 " "img_lanz_7 img_lanz_8";
+  }
+  .lanzamientos-grid-container .img_release {
+    padding-top: 40px;
+    padding-bottom: 10px;
+    width: 200px;
+    height: 200px;
+  }
+  .evento-sub-section {
+    padding-left: 20px;
     display: flex;
-    list-style-type: none;
+    flex-direction: row;
+    align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap ;
+  }
 }
-  
-
-  
-  
-  /* Social Media links del Footer */ 
-.social_media_icons
-{
-   width: 40px;
-   height:100%;
+@media screen and (min-width: 961px) {
+  .menu {
+    /*  border: 1px solid coral;*/
+    /*  coloco el flex en el nav para alinear las dos imagenes y la lista */
+    padding: 25px;
+    flex-direction: row;
+  }
+  .lanzamientos-grid-container {
+    padding: 20px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 15px;
+    grid-template-areas: "img_lanz_1 img_lanz_2 img_lanz_3 img_lanz_4" "img_lanz_5 img_lanz_6 img_lanz_7 img_lanz_8";
+  }
+  .lanzamientos-grid-container .img_release {
+    padding-top: 40px;
+    padding-bottom: 5px;
+    width: 100%;
+    height: 100%;
+  }
+  .evento-sub-section {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: space-around;
+    justify-content: space-between;
+  }
 }
-  
-  #indie_home_img
-  {
-     /* width: 400px;*/
-      width: 100%;
-      height:100%;
-  }  
-
-/*======================================Index .css========================================*/
-.border{
-    border: 1px solid black;
+.menu_container {
+  display: flex;
+  width: 100%;
+  font-family: "Libre Baskerville", sans-serif;
+  font-size: 120%;
 }
-.index-grid_container{
-    padding: 30px;
-    display:grid;
-    align-items: center; 
-    justify-items: center ;
+.menu_container .menu {
+  background-color: tomato;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-.index-grid-item-1 {
-    grid-area: imagen;
-    
-
+.menu_container .menu .logo_image {
+  width: 10rem;
 }
-
-.index-grid-item-2 {
-    grid-area: texto;
+.menu_container .menu .lupa {
+  width: 3rem;
+  height: 3rem;
 }
- 
-
-/*imagen pincipal home*/
-
-
-.titulo_principal{
-    color:white;
-    font-style:normal ;
-    font-weight: bold;
-    text-decoration:none;
-    text-align:center;
-  
+.menu_container .menu ul {
+  /* si no pongo flex aqui los links se ven horizotal*/
+  display: flex;
+  list-style-type: none;
+  /*El margin se coloca en los li de la UL para separar sus items*/
 }
-.paragraph-one
-{
-    font-size: 30px; 
-    font-style:normal ;
-    font-weight: bold;
-    text-decoration:none;
-    text-align:left;
-    text-justify:distribute     ;
-    
+.menu_container .menu ul li {
+  margin: 10px;
+  flex-wrap: wrap;
 }
-/*===========================================Lanzamiento .css=========================================*/
-
-
-  
-
-.lanzamiento-grid-1{
-    grid-area: img_lanz_1;   
-}
-.lanzamiento-grid-2{
-    grid-area: img_lanz_2;   
-}
-.lanzamiento-grid-3{
-    grid-area: img_lanz_3;   
-}
-.lanzamiento-grid-4{
-    grid-area: img_lanz_4;   
-}
-.lanzamiento-grid-5{
-    grid-area: img_lanz_5;   
-}
-.lanzamiento-grid-6{
-    grid-area: img_lanz_6;   
-}
-.lanzamiento-grid-7{
-    grid-area: img_lanz_7;   
-}
-.lanzamiento-grid-8{
-    grid-area: img_lanz_8;   
+.menu_container .menu ul li a {
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
 }
 
-/*===========================================Artistas .css=========================================*/
-.paragraph-artist
-{
-    color:#4f7474;
-    font-size: 20px; 
-    font-style:normal ;
-    font-weight: bold;
-    text-decoration:none;
-    text-align:left;
-
+footer {
+  background-color: tomato;
+  font-family: "Libre Baskerville", sans-serif;
+  font-size: 120%;
+}
+footer ul {
+  padding: 25px;
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* Social Media links del Footer */
+}
+footer ul a .social_media_icons {
+  width: 40px;
+  height: 100%;
 }
 
-
-
-/*===========================Seccion de Lanzamientos===========================================*/
-.titulo_principal{
-    /*  font-size: 30px;   */
-      font-size: 120%;
-}  
-.lanzamientos-grid-container p
-  {
-      /*font-size: 20px;    */
-      font-size: 110%;                        
-}
-.img_artista
-{
-    width: 250px;
-    height:100%;
-
-}  
-
-.release_etiqueta
-{
-
-    color:white;
-    font-size: 20px; 
-    font-style:normal ;
-    font-weight: bold;
-    text-decoration:none;
-    text-align:center;
-}
-.artista_etiqueta
-{
-
-    color:white;
-    font-size: 20px; 
-    font-style:normal ;
-    font-weight: bold;
-    text-decoration:none;
-    text-align:left;
+.border {
+  border: 1px solid black;
 }
 
-.img_artist_titulo
-{
-    width: 550px;
-    height:100%;
+#indie_home_img {
+  width: 100%;
+  height: 100%;
 }
 
-/*===========================Eventos .css================================*/
-
-.evento_p{
-    color:white;
-    font-size: 20px; 
-    font-style:normal ;
-    font-weight: bold;
-    text-decoration:none;
-    text-align: left;
-    text-align:left;
-    
+main .titulo_lanzamiento, main .titulo_eventos {
+  display: flex;
+  justify-content: center;
+  font-size: 120%;
+  color: white;
+}
+main .lanzamientos-grid-container .lanzamiento-grid-1 {
+  grid-area: img_lanz_1;
+}
+main .lanzamientos-grid-container .lanzamiento-grid-2 {
+  grid-area: img_lanz_2;
+}
+main .lanzamientos-grid-container .lanzamiento-grid-3 {
+  grid-area: img_lanz_3;
+}
+main .lanzamientos-grid-container .lanzamiento-grid-4 {
+  grid-area: img_lanz_4;
+}
+main .lanzamientos-grid-container .lanzamiento-grid-5 {
+  grid-area: img_lanz_5;
+}
+main .lanzamientos-grid-container .lanzamiento-grid-6 {
+  grid-area: img_lanz_6;
+}
+main .lanzamientos-grid-container .lanzamiento-grid-7 {
+  grid-area: img_lanz_7;
+}
+main .lanzamientos-grid-container .lanzamiento-grid-8 {
+  grid-area: img_lanz_8;
+}
+main .lanzamientos-grid-container .release_etiqueta {
+  color: white;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
 }
 
-
-.img_evento{
-    width: 150px;
-    height:100%;   
+main .evento-sub-section .evento-section .evento_p {
+  color: white;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: left;
+  text-align: left;
+}
+main .evento-sub-section .evento-imagen .img_evento {
+  width: 150px;
+  height: 100%;
 }
 
-
-/*============================Contacto============================*/ 
-.paragraph-contacto
-{
-   font-size: 1.25rem;
-   font-weight: 400;
-   margin-top: 0;
-   margin-bottom: 1rem;
-   display: block;
-   text-align:justify ;
-    
-}
-
-
-
-
+/*# sourceMappingURL=style.css.map */
