@@ -23,12 +23,18 @@
 
  @mixin fuentes_menu{
    font-family : 'Libre Baskerville', sans-serif;
-   font-size : 120%;
- } 
+   font-size: 1.5rem;
+   font-weight: 400;
+    } 
  @mixin fuentes_foot{
     font-family : 'Libre Baskerville', sans-serif;
-    font-size : 120%;
+    font-size: 1.5rem;
+    font-weight: 400;
   } 
+@mixin gradientes{
+   background: linear-gradient(to right, $color_head_foot , $color-gradient); 
+
+ }
 
  @mixin flex_menu{
     display: flex;

@@ -1,6 +1,6 @@
 footer{
-    background-color:$color-foot;
-    @include fuentes_foot; 
+     @include gradientes;
+     @include fuentes_foot; 
     ul{
       padding: 25px;
       display: flex;
@@ -9,10 +9,16 @@ footer{
       flex-wrap: wrap ;
       /* Social Media links del Footer */ 
       a{
+        color:black;
         .social_media_icons{
            width: 40px;
            height:100%;
+           transition:all 1s;
         }
+        .social_media_icons:hover{
+          width: 35px;
+          height:90%;
+       }
       }
     }  
   }

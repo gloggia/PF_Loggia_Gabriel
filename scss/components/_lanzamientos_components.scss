@@ -1,11 +1,15 @@
 
 main{
+    
    
    .titulo_lanzamiento{
       @include flex_center;
-      @include fuentes_titulo;     
-     }  
-     
+      @include fuentes_titulo;  
+
+      }  
+
+  
+
    .lanzamientos-grid-container 
     
    {
