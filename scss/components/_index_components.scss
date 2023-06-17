@@ -51,22 +51,29 @@
       width: 100%;
     }
   }
- #indie_home_img
- {
-     width: 100%;
-     height:100%;
-     animation-name: transicion_escalar ;
-     animation-timing-function: ease-in;
-     animation-duration: 3s;
-     animation-iteration-count: 1;
 
-}
-
-
- .lead {
-    animation-duration: 2s;
-    animation-name: slidein;
-    animation-iteration-count:1;
-    animation-direction: alternate;
-  }
-
+main{
+   
+   h1{
+      color:$color-body-font;
+      @include flex_center;
+   }
+   #indie_home_img
+   {
+      width: 100%;
+      height:100%;
+      animation-name: transicion_escalar ;
+      animation-timing-function: ease-in;
+      animation-duration: 3s;
+      animation-iteration-count: 1;
+   
+   }
+   
+   
+   .lead {
+     animation-duration: 2s;
+     animation-name: slidein;
+      animation-iteration-count:1;
+      animation-direction: alternate;
+      }
+   }

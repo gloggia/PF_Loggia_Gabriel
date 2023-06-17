@@ -224,7 +224,12 @@ footer ul a .social_media_icons:hover {
     width: 100%;
   }
 }
-#indie_home_img {
+main h1 {
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+main #indie_home_img {
   width: 100%;
   height: 100%;
   animation-name: transicion_escalar;
@@ -232,8 +237,7 @@ footer ul a .social_media_icons:hover {
   animation-duration: 3s;
   animation-iteration-count: 1;
 }
-
-.lead {
+main .lead {
   animation-duration: 2s;
   animation-name: slidein;
   animation-iteration-count: 1;
