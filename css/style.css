@@ -242,6 +242,22 @@ main .lead {
   animation-name: slidein;
   animation-iteration-count: 1;
   animation-direction: alternate;
+  color: white;
+}
+main h5 {
+  color: black;
+  display: flex;
+  justify-content: center;
+}
+main h6 {
+  color: black;
+  display: flex;
+  justify-content: center;
+}
+main p {
+  color: black;
+  display: flex;
+  justify-content: center;
 }
 
 main .titulo_lanzamiento, main .titulo_eventos {

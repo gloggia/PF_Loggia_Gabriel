@@ -67,13 +67,35 @@ main{
       animation-duration: 3s;
       animation-iteration-count: 1;
    
+   
    }
    
    
    .lead {
-     animation-duration: 2s;
-     animation-name: slidein;
+      animation-duration: 2s;
+      animation-name: slidein;
       animation-iteration-count:1;
       animation-direction: alternate;
+      color:$color-body-font;
       }
+   
+   
+   h5{
+      
+      color:$color-p-card;
+      @include flex_center;
+      
+   }
+   h6{
+      
+      color:$color-p-card;
+      @include flex_center;
+   
+    }
+    p{
+      
+      color:$color-p-card  ;
+      @include flex_center;
+   
+    }
    }
